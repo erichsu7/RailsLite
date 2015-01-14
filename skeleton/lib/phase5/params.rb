@@ -16,9 +16,8 @@ module Phase5
     end
 
     def [](key)
-      @params[key.to_s]
+      @params[key.to_s] unless key.nil?
     end
-
 
     def to_s
       @params.to_json.to_s
